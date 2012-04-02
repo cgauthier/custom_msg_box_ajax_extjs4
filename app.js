@@ -10,7 +10,7 @@ Ext.require('App.msg.MessageBox');
 
 Ext.onReady(function() {
 	
-	Ext.Msg.login("Login Sencha App", "Login", "Token", function(btn, username, password, cfg) {
+	Ext.Msg.login("Login Sencha App", "Username", "Password", function(btn, username, password, cfg) {
 		if(btn == "login") {
 			Ext.Ajax.request({
 			    url: 'app/php/jsonconfig.php',
@@ -36,6 +36,6 @@ Ext.onReady(function() {
 				}
 			});
 		}
-	}, this, "Type your Login", "Type your Token", true)
+	}, this, "Type your Username", "Type your Password", true)
 	
 });
